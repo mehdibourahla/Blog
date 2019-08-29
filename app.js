@@ -50,6 +50,6 @@ app.use(indexRoutes);
 app.use("/blogs",blogRoutes);
 app.use("/blogs/:blogid/comments",commentRoutes);
 
-app.listen(3000,function(){
+app.listen(process.env.PORT,function(){
     console.log("SERVER ON");
 }); 
