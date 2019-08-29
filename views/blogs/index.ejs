@@ -1,0 +1,27 @@
+<% include ../partials/header.ejs %>
+<div class="container my-5">
+    <div class="jumbotron mt-5">
+        <% if(blogs && blogs.length > 0){ %>
+            <h1 class="display-3"><%= blogs[blogs.length - 1].title %></h1>
+            <p class="lead"><%= blogs[blogs.length - 1].description.substring(0,100) %>...</p>
+            <a href="/blogs/<%= blogs[blogs.length - 1]._id %>" class="btn btn-primary">More Information</a> 
+   <% } %>
+    </div>
+        <div class="row">
+            <% blogs.forEach(function(blog){%>
+                <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="card shadow-sm">
+                        <img src= "<%= blog.img %>" class="card-img-top" style="max-height: 170px;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><%= blog.title %></h5>
+                            <p class="card-text text-center"><%=blog.description.substring(0,100)%>...</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="/blogs/<%= blog._id %>" class="btn btn-primary">More Information</a>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% })%>
+        </div>
+</div>
+<% include ../partials/footer.ejs %>

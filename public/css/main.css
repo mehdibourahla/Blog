@@ -1,0 +1,37 @@
+.commentButton{
+    height: 40px;
+    width: 0px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    transition: 0.2s linear;
+    opacity: 0;
+} 
+.comment:hover .commentButton{
+width: 40px;
+opacity: 1.0;
+}
+#nav-top{
+    background: black;
+    opacity: 0.8;
+}
+
+#nav-top a {
+    color: white;
+    font-size: 18px;
+    margin-left: 1rem;
+}
+
+#contactBtn .btn{
+    border-radius: 1.5rem;
+    color: black;
+    line-height: .75;
+    margin-top: .5rem;
+    width: 100px;
+
+}
+#contactBtn .btn:hover{
+    border-radius: 1.5rem;
+    background-color: black;
+    color: white;
+}

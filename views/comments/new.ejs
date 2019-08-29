@@ -1,0 +1,30 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/show_blog.ejs %>
+<!-- Modal -->
+<div class="modal fade" id="newCommentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add a comment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form action="/blogs/<%=blog._id%>/comments" method="POST">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="form-group">
+                        <label for="content">Comment</label>
+                        <textarea name="comment[content]" id="content" class="form-control" rows="4" placeholder="Awesome Blog"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="/blogs/<%=blog._id%>" class="btn btn-secondary">Close</a>
+                <button type="submit" class="btn btn-success">Add comment</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>
