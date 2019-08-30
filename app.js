@@ -50,7 +50,7 @@ app.use(function(req,res,next){
 app.use(indexRoutes);
 app.use("/blogs",blogRoutes);
 app.use("/blogs/:blogid/comments",commentRoutes);
-
-app.listen(process.env.PORT,process.env.IP,function(){
+var PORT = process.env.PORT || 3000;
+app.listen(PORT,process.env.IP,function(){
     console.log("SERVER ON");
 }); 
