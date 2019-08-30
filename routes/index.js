@@ -4,7 +4,7 @@ var express = require('express'),
     User     = require('../models/user');
 
 router.get('/',function(req,res){
-    res.render("/blogs");
+    res.send("Everything is just working fine");
 });
 
 router.get('/register',function(req,res){
