@@ -1,7 +1,7 @@
 var express             = require('express'),
+    router              = express.Router({mergeParams:true}),
     Blog                = require('../models/blog'),
-    middleware          = require('../middleware'),
-    router              = express.Router({mergeParams:true});
+    middleware          = require('../middleware');
 
 //LIST ALL BLOGS
 router.get('/',function(req,res){
