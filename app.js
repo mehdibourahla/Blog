@@ -14,7 +14,8 @@ var bodyParser          = require('body-parser'),
        commentRoutes         = require('./routes/comments'),
        blogRoutes            = require('./routes/blogs'),
        flash                 = require('connect-flash');
-var dburl = "mongodb+srv://Mehdi:19972704**@blog-5b7dx.mongodb.net/blog?retryWrites=true&w=majority";//"mongodb://localhost/blog"
+
+var dburl = process.env.DATABASEURL || "mongodb://localhost/blog";
 mongoose.connect(dburl, {useNewUrlParser: true});
 
 
